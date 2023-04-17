@@ -1,0 +1,30 @@
+---
+interface Props {
+  light: {
+    width: string;
+    height: string;
+    left: string;
+    top: string;
+    background: string;
+  };
+}
+
+const { light }: Props = Astro.props;
+---
+
+<div
+  style={{
+    width: light.width,
+    height: light.height,
+    left: light.left,
+    top: light.top,
+    background: light.background,
+  }}
+>
+</div>
+
+<style>
+  div {
+    position: absolute;
+  }
+</style>

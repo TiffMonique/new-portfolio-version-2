@@ -1,0 +1,27 @@
+---
+export interface IButton {
+  fontSize: number | string;
+  lineHeight: number | string;
+  background: string;
+  borderRadius: string;
+  padding: string;
+  boxShadow: string;
+}
+interface ButtonProps {
+  children: any;
+  buttonStyle: IButton;
+}
+
+const { buttonStyle } = Astro.props as ButtonProps;
+---
+
+<div class="button" style={{ ...buttonStyle }}>
+  <slot />
+</div>
+
+<style>
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  color: #ffffff;
+</style>
