@@ -1,0 +1,36 @@
+.card {
+  position: relative;
+  top: 150px;
+  left: 40px;
+  width: 405px;
+  height: 172px;
+  opacity: 0.7;
+  padding-bottom: 32px;
+  box-sizing: border-box;
+  background: #231729;
+  border: 2px solid rgba(200, 147, 252, 0.21);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.title {
+  position: absolute;
+  left: 24px;
+  top: 32px;
+  bottom: 111px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+button {
+  position: absolute;
+  left: 24px;
+  bottom: 24.51px;
+}

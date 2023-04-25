@@ -1,7 +1,7 @@
 ---
-import Hero from '../components/Hero.astro';
+import Projects from "../components/client/Projects";
+import Hero from "../components/sever/Hero.astro";
 ---
 
-
-<Hero/>
-
+<Hero />
+<Projects client:only="react" />

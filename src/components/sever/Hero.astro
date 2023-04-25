@@ -1,19 +1,21 @@
 ---
-import Button, { IButton } from "./Button.astro";
+import Button, { IButton } from "../client/Button.tsx";
 import Nabvar from "./Navbar.astro";
 import grid from "/assets/grid.png";
 import Light from "./Light.astro";
-import "../styles/global.css";
+import "../../styles/global.css";
 
 const buttonStyle: IButton = {
-  fontSize: "20px",
-  lineHeight: "24px",
-  background:
-    "linear-gradient(263.55deg, #891DF5 44.92%, rgba(137, 29, 245, 0) 165.97%)",
-  borderRadius: "4px",
-  padding: "15px 37px 18px",
-  boxShadow:
-    "inset 0px 12px 4px rgba(251, 247, 255, 0.12), inset 0px -9px 23px rgba(52, 14, 90, 0.88), inset 0px 5px 6px rgba(255, 255, 255, 0.25)",
+  style: {
+    fontSize: "20px",
+    lineHeight: "24px",
+    background:
+      "linear-gradient(263.55deg, #891DF5 44.92%, rgba(137, 29, 245, 0) 165.97%)",
+    borderRadius: "4px",
+    padding: "15px 37px 18px",
+    boxShadow:
+      "inset 0px 12px 4px rgba(251, 247, 255, 0.12), inset 0px -9px 23px rgba(52, 14, 90, 0.88), inset 0px 5px 6px rgba(255, 255, 255, 0.25)",
+  },
 };
 
 const lightData = {
@@ -43,7 +45,9 @@ const lightData = {
         functional and performant code.
       </p>
     </div>
-    <Button class="button" buttonStyle={buttonStyle}>Download CV</Button>
+    <Button className="download-button" buttonStyle={buttonStyle}>
+      Download CV
+    </Button>
   </div>
 
   <img class="grid" src={grid} alt="grid" />
@@ -51,15 +55,13 @@ const lightData = {
 
 <style>
   #hero {
-    height: 100%;
+    height: 741px;
   }
-  .content div {
-    justify-content: center;
+  .content {
     .title h1 {
       position: absolute;
       width: 536px;
       height: 114px;
-      left: 452px;
       top: 136px;
       font-family: "Chakra Petch";
       font-style: normal;
@@ -68,13 +70,14 @@ const lightData = {
       line-height: 57px;
       text-align: center;
       color: #f7f6f7;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .body p {
       position: absolute;
       width: 374px;
       height: 51px;
-      left: 533px;
       top: 266px;
       font-family: "Inter";
       font-style: normal;
@@ -83,13 +86,14 @@ const lightData = {
       line-height: 160.52%;
       text-align: center;
       color: #d4d2d5;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .subTitle h4 {
       position: absolute;
       width: 244px;
       height: 31px;
-      left: 598px;
       top: 101px;
       font-family: "Chakra Petch";
       font-style: normal;
@@ -97,21 +101,20 @@ const lightData = {
       font-size: 24px;
       line-height: 31px;
       color: #eaeaea;
+      left: 50%;
+      transform: translateX(-50%);
     }
-    .button {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 15px 37px 18px;
-      gap: 8px;
+    .download-button {
       position: absolute;
-      left: 617px;
+      width: 206px;
+      height: 57px;
       top: 341px;
-      color: #ffffff;
-      cursor: pointer;
+      gap: 8px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
+
   .grid {
     width: 100%;
     display: block;

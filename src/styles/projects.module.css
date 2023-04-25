@@ -1,0 +1,58 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  filter: drop-shadow(0px 19px 60px #1b151e);
+}
+
+.rectangle {
+  box-sizing: border-box;
+  display: flex;
+  width: 1279px;
+  height: 1112px;
+  background: #171619;
+  top: 100px;
+  position: relative;
+  flex-direction: column;
+}
+.projects {
+  position: absolute;
+  width: 415px;
+  height: 57px;
+  left: 152px;
+  top: 935px;
+  font-family: "Chakra Petch";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 57px;
+  text-align: center;
+  color: #ffffff;
+}
+.build {
+  position: absolute;
+  width: 407px;
+  height: 57px;
+  left: 182px;
+  top: 999px;
+  font-family: "Chakra Petch";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 57px;
+  text-align: center;
+
+  color: #aea8b4;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.selected {
+  background: linear-gradient(180deg, #370f4a 0%, rgba(63, 16, 86, 0) 100%);
+  border: 2px solid #9b38ff;
+}
